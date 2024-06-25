@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progress Indicator</title>
+    <link rel="stylesheet" href="style/reset.css">
+    <link rel="stylesheet" href="style/sobre.css">
+    <link rel="stylesheet" href="style/cursos.css"> <!-- Adicionei um novo arquivo CSS para os cursos -->
+</head>
+<body>
+    <header>
+        <img src="./assets/svgs/logo-fiap.svg" alt="Logo" id="logo">
+        <div id="progress-bar"></div>
+    </header>
+    <main>
+        <section class="principal">
+            <div class="container">
+                <div class="texto-centralizado" id="texto-centralizado">
+                    <span class="sobre" id="texto-sobre">SOBRE</span>
+                    <div class="bloco">
+                        <div class="melhor">
+                            <p>A Melhor Faculdade</p>
+                        </div>
+                        <div>
+                            <p>de Tecnologia</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="stopmotion-section">
+            <div class="overlay"></div>
+        </section>
+
+        <div class="wrapper">
+            <section class="cursos-section">
+                <div class="box-header">
+                    <div class="box-title">
+                        <h2 class="box-curso">Cursos</h2>
+                        <p class="box-selecione">Cursos de curta duração</p>
+                    </div>
+                    <div class="box-links">
+                        <ul class="curso-links">
+                            <li><a href="#" onclick="mostrarCurso(event, 'curso1')">Tecnologia</a></li>
+                            <li><a href="#" onclick="mostrarCurso(event, 'curso2')">Inovação</a></li>
+                            <li><a href="#" onclick="mostrarCurso(event, 'curso3')">Negócios</a></li>
+                        </ul>
+                    </div>
+                </div>
+              <div class="curso-info">
+                <h3 id="curso-titulo"></h3>
+                <p id="curso-descricao"></p>
+                <p id="curso-descricao2"></p>
+                <p id="curso-descricao1" class="curso-descricao curso-descricao1"></p>
+                <p id="curso-descricao2" class="curso-descricao curso-descricao2"></p>
+                <p id="curso-descricao3" class="curso-descricao curso-descricao3"></p>
+              </div>
+            </section>
+        </div>
+        
+
+    </main>
+    <script src="script/linha.js"></script>
+    <script src="script/sobre.js"></script>
+    <script src="script/marquee.js"></script>
+    <script src="script/water.js"></script>
+    <script src="script/cursos.js"></script>
+</body>
+</html>

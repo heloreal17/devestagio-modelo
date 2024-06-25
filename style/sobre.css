@@ -1,0 +1,479 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gotham HTF', Arial, sans-serif;
+    background-color: #000;
+    color: #fff;
+    height: 100%;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    background-color: black;
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+}
+
+
+.container {
+    margin-top: 25px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: 500;
+    z-index: 2; /* Certifique-se de que o texto está na frente */
+}
+
+.bloco {
+    font-size: 5rem;
+    margin-bottom: 60px;
+    font-weight: 600;
+}
+
+.melhor {
+    margin-left: 60px;
+    font-size: 4.5rem;
+    width: 800px;
+}
+
+.sobre {
+    font-weight: 900;
+    margin-top: 20px;
+    font-size: 15rem;
+    color: #101113;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 0.5s ease;
+}
+
+.sobre.mostrar {
+    opacity: 1;
+}
+
+.stopmotion-section {
+    margin-top: 500px;
+    width: 100%;
+    height: 130vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1; /* Coloque o z-index abaixo do container */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: background-image 0.05s ease-in-out;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.wrapper {
+    margin: 1700px 20px 300px 20px;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+  
+.box-header{
+    display: flex;
+    gap: 500px;
+}
+
+.box-selecione{
+    font-size: 22px;
+    font-weight: 500;
+    margin-left: 5px;
+    color: #F80D5A;
+}
+
+.box-links{
+    margin-top: 10px;
+}
+
+.cursos-section {
+    margin-bottom: 20px;
+}
+  
+.cursos-section h2 {
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    
+}
+
+.curso-info.mostrar-linha #curso-descricao::before,
+.curso-info.mostrar-linha #curso-descricao::after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    width: 50%;
+    height: 1px;
+    opacity: 80%;
+    background-color: #ffffff;
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+#curso-descricao {
+    position: relative;
+    padding: 20px 0;
+    margin: 15px 0;
+    text-align: left; /* Alinha o texto à direita */
+}
+
+#curso-descricao::before {
+    top: 0;
+}
+
+#curso-descricao::after {
+    bottom: 0;
+}
+
+
+#curso-descricao2::before {
+    /* Remova ou comente a propriedade 'top' para eliminar a linha superior */
+    /* top: 0; */
+    bottom: 0; /* Mantém a linha na parte inferior */
+}
+
+#curso-descricao2::after {
+    /* Mantém a propriedade 'bottom' para manter a linha inferior */
+    bottom: 0;
+}
+
+
+
+
+.cursos-section .curso-links {
+    list-style-type: none;
+    padding: 0;
+    font-size: 20px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+  
+.cursos-section .curso-links li {
+    display: inline-block;
+}
+  
+.cursos-section .curso-links li a {
+    text-decoration: none;
+    border-radius: 4px;
+    color: #fff;
+    margin: 18px;
+    position: relative;
+    top: -10px; /* Ajuste a distância da linha acima do link */
+}
+
+.cursos-section .curso-links li a::before {
+    content: "";
+    position: absolute;
+    top: -10px; /* Ajuste a distância da linha acima do link */
+    left: 0;
+    width: 40px;
+    height: 4px;
+    background-color: #F80D5A; /* Cor da linha */
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+.cursos-section .curso-links li a:hover::before,
+.cursos-section .curso-links li a:focus::before,
+.cursos-section .curso-links li a:active::before {
+    transform: scaleX(1);
+}
+
+
+.curso-info {
+    margin: 50px 0 30px 5px;
+}
+  
+.curso-info h3 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #eeeeee;
+    opacity: 80%;
+}
+  
+.curso-info p {
+    font-size: 20px;
+    margin: 15px auto;
+}
+
+/* FOOOOTERRRR */
+
+
+@media screen and (max-width: 768px) {
+    .container {
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%, -30%);
+        font-weight: 500;
+        margin-top: 0;
+    }
+    .bloco {
+        font-size: 2rem;
+        margin-bottom: 30px;
+    }
+    .melhor {
+        margin-left: 0;
+        font-size: 2rem;
+        width: auto;
+    }
+    .sobre {
+        font-size: 4rem;
+        margin: 0;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%, -60%);
+    }
+    #logo {
+        max-width: 70px;
+    }
+    .stopmotion-section {
+        margin-top: 150px;
+        width: 100%;
+        height: 70vh;
+        top: 0;
+        left: 0;
+        z-index: 1; /* Coloque o z-index abaixo do container */
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        transition: background-image 0.05s ease-in-out;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+        top: 20%;
+        left: 50%;
+        transform: translate(-50%, -20%);
+        font-weight: 500;
+        margin-top: 0;
+    }
+    .bloco {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+    }
+    .melhor {
+        font-size: 1.5rem;
+        width: auto;
+    }
+    .sobre {
+        font-size: 3rem;
+        top: 70%;
+        left: 50%;
+        transform: translate(-50%, -70%);
+    }
+    #logo {
+        max-width: 50px;
+    }
+    .stopmotion-section {
+        margin-top: 250px;
+        width: 100%;
+        height: 60vh;
+        top: 0;
+        left: 0;
+        z-index: 1; /* Coloque o z-index abaixo do container */
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        transition: background-image 0.05s ease-in-out;
+    }
+}
+
+header.scrolled {
+    background-color: #202121;
+}
+
+#progress-bar {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    width: 0;
+    height: 4px;
+    background-color: #F80D5A;
+    z-index: 1001;
+    transition: width 0.5s ease-in-out;
+    border-radius: 5px;
+}
+
+#logo {
+    max-width: 100px;
+    margin: 1rem 0;
+}
+
+main {
+    margin-top: 120px;
+}
+
+body.scrolled header {
+    background-color: #666;
+}
+
+
+/* Ajustes gerais para telas menores */
+
+@media screen and (max-width: 768px) {
+    header {
+        padding: 10px 0;
+    }
+    
+    #logo {
+        max-width: 60px;
+    }
+    
+    .container {
+        font-size: 1.5rem;
+        margin-top: 0;
+    }
+    
+    .bloco {
+        font-size: 3rem;
+        margin-bottom: 30px;
+    }
+    
+    .melhor {
+        font-size: 2.5rem;
+    }
+    
+    .sobre {
+        font-size: 2rem;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+    
+    .stopmotion-section {
+        margin-top: 100px;
+        height: 50vh;
+    }
+    
+    .wrapper {
+        margin: 700px 10px 100px 10px;
+    }
+    
+    .box-header {
+        gap: 100px;
+    }
+    
+    .box-selecione {
+        font-size: 18px;
+    }
+    
+    .cursos-section h2 {
+        font-size: 3rem;
+        margin-bottom: 5px;
+    }
+    
+    .curso-info {
+        margin: 30px 0 20px 5px;
+    }
+    
+    .curso-info h3 {
+        font-size: 1.5rem;
+    }
+    
+    .curso-info p {
+        font-size: 16px;
+        margin: 10px auto;
+    }
+    
+    .cursos-section .curso-links li a {
+        margin: 10px;
+        font-size: 16px;
+    }
+    
+    .cursos-section .curso-links li a::before {
+        width: 30px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+        font-size: 1.2rem;
+    }
+    
+    .bloco {
+        font-size: 2rem;
+        margin-bottom: 20px;
+    }
+    
+    .melhor {
+        font-size: 1.8rem;
+    }
+    
+    .sobre {
+        font-size: 1.5rem;
+        top: 60%;
+    }
+    
+    #logo {
+        max-width: 40px;
+    }
+    
+    .stopmotion-section {
+        margin-top: 150px;
+        height: 40vh;
+    }
+    
+    .wrapper {
+        margin: 400px 10px 50px 10px;
+        padding: 20px;
+    }
+    
+    .box-header {
+        gap: 50px;
+    }
+    
+    .box-selecione {
+        font-size: 16px;
+    }
+    
+    .cursos-section h2 {
+        font-size: 2.5rem;
+    }
+    
+    .curso-info {
+        margin: 20px 0 10px 5px;
+    }
+    
+    .curso-info h3 {
+        font-size: 1.2rem;
+    }
+    
+    .curso-info p {
+        font-size: 14px;
+        margin: 8px auto;
+    }
+    
+    .cursos-section .curso-links li a {
+        margin: 8px;
+        font-size: 14px;
+    }
+    
+    .cursos-section .curso-links li a::before {
+        width: 25px;
+    }
+}
